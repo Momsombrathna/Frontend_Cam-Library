@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Button from './Button';
-import { DiAtom } from "react-icons/di";
+// import { DiAtom } from "react-icons/di";
 import { BsList } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import Logo from '../Assets/logo.png';
 
 
 const Nav = () => {
@@ -17,14 +18,18 @@ const Nav = () => {
 
     return (
         <div className=' shadow-md w-full fixed top-0 left-0'>
-            <div className=' md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+            <div className=' md:flex items-center justify-between bg-white py-1 md:px-10 px-7'>
+            <Link to="/">
             <div className=' font-bold text-2xl cursor-pointer flex items-center  text-gray-800'>
                     
-                <span className='text-3xl text-indigo-600 mr-1 pt-1'>
-                    <DiAtom size="2rem" />
-                </span>
-                Cam-Library
-            </div>
+                    <span className='text-3xl text-indigo-600 mr-1 pt-1'>
+                        {/* <DiAtom size="2rem" /> */}
+                        <img src={Logo} alt="logo" className=' w-14 h-14'/>
+                       
+                    </span>
+                    Cam-Library
+                </div>
+            </Link>
             
             <div onClick={()=>setOpen(!open)}  className='text-3xl absolute right-8 top-6 cursor-pointer lg:hidden'>
                 <BsList name={open? 'close':''} className='hover:text-cyan-600 rounded-md border-2' size="2rem"/></div>
