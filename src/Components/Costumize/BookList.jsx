@@ -1,5 +1,5 @@
 import React from 'react';
-import Book1 from '../Assets/book1.jpg'
+import Book1 from '../Assets/book1.jpg';
 
 const BookList = () => {
     return (
