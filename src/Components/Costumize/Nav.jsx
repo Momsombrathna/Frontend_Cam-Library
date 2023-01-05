@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Button from './Button';
-// import { DiAtom } from "react-icons/di";
 import { BsList } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import Logo from '../Assets/logo.png';
@@ -8,9 +7,9 @@ import Logo from '../Assets/logo.png';
 
 const Nav = () => {
     let Links =[
-        {name:"HOME",link:"/"},
-        {name:"SAVE",link:"/save"},
-        {name:"READ",link:"/readbook"},
+        {name:"Home",link:"/home"},
+        {name:"Save",link:"/save"},
+        {name:"Read",link:"/readbook"},
         
     ];
 
@@ -19,7 +18,7 @@ const Nav = () => {
     return (
         <div className=' shadow-md w-full fixed top-0 left-0'>
             <div className=' md:flex items-center justify-between bg-white py-1 md:px-10 px-7'>
-            <Link to="/">
+            <Link to="/home">
             <div className=' font-bold text-2xl cursor-pointer flex items-center  text-gray-800'>
                     
                     <span className='text-3xl text-indigo-600 mr-1 pt-1'>
@@ -53,7 +52,7 @@ const Nav = () => {
                 {
                     Links.map((link)=>(
                         <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-                            <a href={link.link} className='text-grey-800 text-lg  border-0 rounded-xl px-1 hover:bg-gray-200 duration-500'>{link.name}</a>
+                            <a href={link.link} className=' text-gray-600 text-lg hover:text-black  border-0 rounded-xl px-1 hover:bg-gray-200 duration-500'>{link.name}</a>
                         </li>
                     ))
                 }

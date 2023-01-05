@@ -6,12 +6,14 @@ import Login from './Components/Login';
 import ReadBook from './Components/ReadBook';
 import Save from './Components/Save';
 import SignIn from './Components/SignIn';
+import WelcomePage from './Components/WelcomePage';
 
 const App = () => {
   return (
     <Router>
         <Routes>
-          <Route path='/' element={<Home />}/>
+          <Route path='/' element={<WelcomePage />}/>
+          <Route path='/home' element={<Home />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/readbook' element={<ReadBook />}/>
           <Route path='/save' element={<Save />}/>
