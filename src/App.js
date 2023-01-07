@@ -7,9 +7,12 @@ import Save from './Components/Save';
 import WelcomePage from './Components/WelcomePage';
 import SignUp from './Components/SignUp';
 import LogIn from './Components/Login';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
+    <>
+    <ToastContainer theme='colored' limit={2}></ToastContainer>
     <Router>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>
@@ -21,6 +24,7 @@ const App = () => {
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
     </Router>
+    </>
   );
 };
 
