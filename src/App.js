@@ -6,7 +6,7 @@ import ReadBook from './Components/ReadBook';
 import Save from './Components/Save';
 import WelcomePage from './Components/WelcomePage';
 import SignUp from './Components/SignUp';
-import LogIn from './Components/LogIn';
+import LogIn from './Components/Login';
 
 const App = () => {
   return (
