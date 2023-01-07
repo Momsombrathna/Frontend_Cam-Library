@@ -1,7 +1,7 @@
 import React from 'react';
 import Welcome from './Assets/welocome.jpg';
 
-const Login = () => {
+const LogIn = () => {
     return (
         <div class="py-48">
             <div class="flex bg-white text-gray-500 flexrounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
@@ -39,4 +39,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default LogIn;

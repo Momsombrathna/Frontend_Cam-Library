@@ -5,6 +5,8 @@ import ErrorPage from './Components/ErrorPage';
 import ReadBook from './Components/ReadBook';
 import Save from './Components/Save';
 import WelcomePage from './Components/WelcomePage';
+import SignUp from './Components/SignUp';
+import LogIn from './Components/LogIn';
 
 const App = () => {
   return (
@@ -12,7 +14,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={<WelcomePage />}/>
           <Route path='/home' element={<Home />}/>
-
+          <Route path='/login' element={<LogIn />}/>
+          <Route path='/signup' element={<SignUp />}/>
           <Route path='/readbook' element={<ReadBook />}/>
           <Route path='/save' element={<Save />}/>
           <Route path='*' element={<ErrorPage />}/>

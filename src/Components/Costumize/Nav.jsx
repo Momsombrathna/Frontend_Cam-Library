@@ -58,7 +58,7 @@ const Nav = () => {
                 }
                 <div className="flex flex-row gap-1">
                 <Link to="/login"><Button>Log In</Button></Link>
-                <Link to="/signin"><Button>Sign Up</Button></Link>
+                <Link to="/signup"><Button>Sign Up</Button></Link>
                 </div>
             </ul>
          
