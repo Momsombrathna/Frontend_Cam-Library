@@ -12,7 +12,9 @@ import { ToastContainer } from 'react-toastify';
 const App = () => {
   return (
     <>
-    <ToastContainer theme='colored' limit={2}></ToastContainer>
+    <ToastContainer theme='colored' limit={2} autoClose={2000} pauseOnHover
+    draggable={false}
+    pauseOnFocusLoss={false}></ToastContainer>
     <Router>
         <Routes>
           <Route path='/' element={<WelcomePage />}/>

@@ -1,29 +1,26 @@
 {
   "user": [
     {
-      "id": "brathna",
-      "email": "brathna84@gmail.com",
-      "password": "12207126",
-      "confrimpassword": "12207126"
-    },
-    {
-      "id": "Peter",
+      "id": 1,
+      "name": "brosith",
       "email": "peterson@gmail.com",
-      "password": "friday@1234",
-      "confrimpassword": "friday@1234"
-    },
-    {
-      "id": "Louis",
-      "email": "louislovjo@gmail.yahoo",
-      "password": "12345673",
-      "confrimpassword": "12345673",
+      "password": "12345678",
+      "confrimpassword": "12345678",
       "rememberme": "confirm"
     },
     {
-      "id": "efsf",
-      "email": "brathna84@gmail.com",
-      "password": "sfsdf2222",
-      "confrimpassword": "",
+      "name": "brathna",
+      "email": "mom.sombrathna26@gmai.com",
+      "password": "12345678",
+      "confrimpassword": "12345678",
+      "rememberme": "confirm",
+      "id": 2
+    },
+    {
+      "id": "rosa",
+      "email": "louislovjo@gmail.yahoo",
+      "password": "12345678",
+      "confrimpassword": "12345678",
       "rememberme": "confirm"
     }
   ]

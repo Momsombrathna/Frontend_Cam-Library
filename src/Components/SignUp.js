@@ -7,16 +7,17 @@ import Welcome from './Assets/welocome.jpg';
 const SignUp = () => {
 
     const[id,idchange]=useState("");
-    const[rememberme,remembermechange]=useState("confirm");
-    const[email,emailchange]=useState("");
-    const[password,passwordchange]=useState("");
-    const[confrimpassword,confirmpasswordchange]=useState("");
+    // const[name,namechange]=useState("");
+    const[accept,acceptchange] = useState("confirm");
+    const[email,emailchange] = useState("");
+    const[password,passwordchange] = useState("");
+    const[confrimpassword,confirmpasswordchange] = useState("");
 
-    const navigate=useNavigate();
+    const navigate = useNavigate();
 
     const handlesubmit=(e)=>{
         e.preventDefault();
-        let regonize={id,email,password,confrimpassword,rememberme};
+        let regonize={id,email,password,confrimpassword,accept};
         // console.log(regobj);
 
         fetch("http://localhost:8000/user", {
@@ -25,7 +26,7 @@ const SignUp = () => {
             body:JSON.stringify(regonize)
         }).then((res)=>{
             toast.success('Resgister successfully.');
-            navigate('/login');
+            navigate('/home');
         }).catch((err)=>{
             toast.error('Failed :'+err.message);
         });
@@ -49,7 +50,7 @@ const SignUp = () => {
                 </div>
                 <div class="mt-2">
                     <label class="block text-gray-600 text-sm font-bold mb-2">Your Name</label>
-                    <input value={id} onChange={e=>idchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-1 px-4 block w-full appearance-none" type="text" />
+                    <input value={id} onChange={e=>idchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-1 px-4 block w-full appearance-none" name='name' type="text" />
                 </div>
                 <div class="mt-2">
                     <label class="block text-gray-600 text-sm font-bold mb-2">Email Address</label>
@@ -66,14 +67,14 @@ const SignUp = () => {
                         <label class="block text-gray-600 text-sm font-bold mb-2">Repeat Password</label>
                     </div>
                     <input value={confrimpassword} onChange={e=>confirmpasswordchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-1 px-4 block w-full appearance-none" type="password" id="pwd" name="pwd" minlength="8" />
-                    {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>}
+                    {/* {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>} */}
                 </div>
                 {/* <div className=" flex flex-row gap-3 mt-5 pl-5">
                     <input className=' rounded-sm' type="checkbox" required />
                     <p className='font-bold text-sm'>Remember me</p>
                 </div> */}
                 <div class="flex items-center mb-3 mt-4 pl-2">
-                    <input value={rememberme} onChange={e=>remembermechange(e.target.value)} id="remember" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
+                    <input value={accept} onChange={e=>acceptchange(e.target.value)} id="remember" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                     <label for="remember" class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">Remember me</label>
                 </div>
                 <div class="mt-3">
