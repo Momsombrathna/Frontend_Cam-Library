@@ -22,6 +22,20 @@
       "password": "12345678",
       "confrimpassword": "12345678",
       "rememberme": "confirm"
+    },
+    {
+      "id": "sophors",
+      "email": "sophors@gmail.com",
+      "password": "sophors6",
+      "confrimpassword": "sophors6",
+      "accept": "confirm"
+    },
+    {
+      "id": 3,
+      "email": "",
+      "password": "",
+      "confrimpassword": "",
+      "accept": "confirm"
     }
   ]
 }
