@@ -36,6 +36,13 @@
       "password": "",
       "confrimpassword": "",
       "accept": "confirm"
+    },
+    {
+      "id": "Sophors",
+      "email": "sophors@gmail.com",
+      "password": "sophors9",
+      "confrimpassword": "sophors9",
+      "accept": "confirm"
     }
   ]
 }

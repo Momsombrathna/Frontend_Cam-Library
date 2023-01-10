@@ -44,7 +44,7 @@ const SignUp = () => {
         <div class=" py-36 p-5">
         <div class="flex bg-white text-gray-500 rounded-lg shadow-xl border-2 overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
             <div class="hidden lg:block lg:w-2/4 bg-cover"><img src={Welcome} className='rounded-l-lg' alt="welcome" /></div>
-            <form onSubmit={handlesubmit} class="w-full p-4 lg:w-1/2 px-5">
+            <form onSubmit={handlesubmit} class="w-full p-4 lg:w-1/2 md:px-10 px-5">
                 <div class="text-center mb-4">
                     <h2 class="text-3xl font-bold text-gray-700 text-center">Register Account</h2>
                 </div>
@@ -77,7 +77,7 @@ const SignUp = () => {
                     <input value={accept} onChange={e=>acceptchange(e.target.value)} id="remember" type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" required/>
                     <label for="remember" class="ml-2 text-sm font-medium text-gray-700 dark:text-gray-300">Remember me</label>
                 </div>
-                <div class="mt-4">
+                <div class="mt-3">
                     <button onChange={e=>checkpassword(e)} class="bg-blue-700 text-white text-center font-medium py-2 px-5 w-full rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" type='submit'>Register now</button>
                 </div>
                 

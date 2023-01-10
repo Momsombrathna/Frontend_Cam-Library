@@ -51,7 +51,7 @@ const Login = () => {
         <div class="py-36 p-5">
             <div class="flex bg-white text-gray-500 border-2 rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
                 <div class="hidden lg:block lg:w-1/2 bg-cover"><img src={Welcome} className='rounded-l-lg' alt="welcome" /></div>
-                <form onSubmit={ProceedLogin} class="w-full p-5 lg:w-1/2 px-5">
+                <form onSubmit={ProceedLogin} class="w-full p-5 lg:w-1/2 md:px-10 px-5">
                     <div class="text-center mb-8">
                         <h2 class="text-3xl font-bold text-gray-700 text-center mb-5">Log In</h2>
                         <p class="text-xl text-gray-600 text-center">Welcome to Cam-Library</p>
