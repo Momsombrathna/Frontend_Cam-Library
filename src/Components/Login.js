@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Welcome from './Assets/welocome.jpg';
+import {AiFillEye, AiFillEyeInvisible} from 'react-icons/ai';
 
 const Login = () => {
     const [username,usernameupdate] = useState('');
     const [password,passwordupdate] = useState('');
+    const [passwordEye,setPasswordEye] = useState(false);
 
     const usenavigate=useNavigate();
 
@@ -19,13 +21,13 @@ const Login = () => {
         }).then((resp)=>{
             console.log(resp)
             if(Object.keys(resp).length===0){
-                toast.error('Please Enter valid usernaem');
+                toast.error('Please Enter valid usernaem.');
             }else{
                 if(resp.password === password) {
                     toast.success('Success');
                     usenavigate('/home')
                 }else{
-                    toast.error('please Enter valid credentials')
+                    toast.error('Please Enter valid credentials.')
                 }
             }
         }).catch((err)=>{
@@ -34,6 +36,8 @@ const Login = () => {
         
         }
     }
+
+    // Validation
     const validate=()=>{
         let result = true;
         if(username ==='' || username === null){
@@ -47,7 +51,14 @@ const Login = () => {
         return result;
     }
 
+    // handle password eye
+    const handlePasswordClick=()=>{
+        setPasswordEye(!passwordEye);
+    }
+
+  
     return (
+        <>
         <div class="py-36 p-5">
             <div class="flex bg-white text-gray-500 border-2 rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
                 <div class="hidden lg:block lg:w-1/2 bg-cover"><img src={Welcome} className='rounded-l-lg' alt="welcome" /></div>
@@ -63,9 +74,18 @@ const Login = () => {
                     <div class="mt-4">
                         <div class="flex justify-between">
                             <label class="block text-gray-700 text-md font-bold mb-2">Password</label>
-                            <a href="#" class="text-sm text-gray-600 hover:text-black hover:underline">Forget Password?</a>
+                            <a href="/#" class="text-sm text-gray-600 hover:text-black hover:underline">Forget Password?</a>
                         </div>
+                        <div className=' relative'>
                         <input  value={password} onChange={e=>passwordupdate(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" placeholder='Your Password' type="password" />
+                        <div className=' text-xl absolute top-3 right-5'>
+                            {
+                                (passwordEye === false)? <AiFillEyeInvisible className=' hover:text-gray-700' onChange={handlePasswordClick} />:
+                                <AiFillEye className=' hover:text-gray-700' onChange={handlePasswordClick}/>
+                            }
+                             
+                        </div>
+                        </div>
                     </div>
 
                     <div class="mt-8">
@@ -73,14 +93,12 @@ const Login = () => {
                     </div>
                     <div class="mt-6 flex flex-row items-center justify-center gap-2">
                         <div>Don't have an account ?</div>
-                        <Link to="/signup"><div className='font-bold text-blue-600 text-md'>Create now</div></Link>
-                        
+                        <Link to="/signup"><div className='font-bold text-blue-600 text-md'>Create now</div></Link>  
                     </div>
-
                 </form>
             </div>
-        </div>
-
+        </div>        
+        </>
     );
 };
 

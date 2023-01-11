@@ -1,48 +1,19 @@
 {
   "user": [
     {
-      "id": 1,
-      "name": "brosith",
+      "id": "brathna",
+      "email": "brathna84@gmail.com",
+      "password": "12345678",
+      "confrim_password": "12345689",
+      "accept": "confirm"
+    },
+    {
+      "id": "brosith",
       "email": "peterson@gmail.com",
-      "password": "12345678",
-      "confrimpassword": "12345678",
-      "rememberme": "confirm"
-    },
-    {
-      "name": "brathna",
-      "email": "mom.sombrathna26@gmai.com",
-      "password": "12345678",
-      "confrimpassword": "12345678",
-      "rememberme": "confirm",
-      "id": 2
-    },
-    {
-      "id": "rosa",
-      "email": "louislovjo@gmail.yahoo",
-      "password": "12345678",
-      "confrimpassword": "12345678",
-      "rememberme": "confirm"
-    },
-    {
-      "id": "sophors",
-      "email": "sophors@gmail.com",
-      "password": "sophors6",
-      "confrimpassword": "sophors6",
-      "accept": "confirm"
-    },
-    {
-      "id": 3,
-      "email": "",
-      "password": "",
-      "confrimpassword": "",
-      "accept": "confirm"
-    },
-    {
-      "id": "Sophors",
-      "email": "sophors@gmail.com",
-      "password": "sophors9",
-      "confrimpassword": "sophors9",
+      "password": "12345123",
+      "confrim_password": "12345123",
       "accept": "confirm"
     }
+    
   ]
 }
