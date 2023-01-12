@@ -2,12 +2,15 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Welcome from './Assets/welocome.jpg';
-import {AiFillEye, AiFillEyeInvisible} from 'react-icons/ai';
+import { Icon } from 'react-icons-kit';
+import { eyeOff } from 'react-icons-kit/feather/eyeOff';
+import { eye } from 'react-icons-kit/feather/eye';
+
 
 const Login = () => {
     const [username,usernameupdate] = useState('');
     const [password,passwordupdate] = useState('');
-    const [passwordEye,setPasswordEye] = useState(false);
+  
 
     const usenavigate=useNavigate();
 
@@ -52,8 +55,17 @@ const Login = () => {
     }
 
     // handle password eye
-    const handlePasswordClick=()=>{
-        setPasswordEye(!passwordEye);
+    const [type, setType]=useState('password');
+    const [icon, setIcon]=useState(eyeOff);
+   
+    const handleToggle=()=>{
+        if(type === 'password'){
+            setIcon(eye);
+            setType('text');
+        }else{
+            setIcon(eyeOff);
+            setType('password');
+        }
     }
 
   
@@ -77,14 +89,10 @@ const Login = () => {
                             <a href="/#" class="text-sm text-gray-600 hover:text-black hover:underline">Forget Password?</a>
                         </div>
                         <div className=' relative'>
-                        <input  value={password} onChange={e=>passwordupdate(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" placeholder='Your Password' type="password" />
-                        <div className=' text-xl absolute top-3 right-5'>
-                            {
-                                (passwordEye === false)? <AiFillEyeInvisible className=' hover:text-gray-700' onChange={handlePasswordClick} />:
-                                <AiFillEye className=' hover:text-gray-700' onChange={handlePasswordClick}/>
-                            }
-                             
-                        </div>
+                        <input type={type}  value={password} onChange={e=>passwordupdate(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" placeholder='Your Password' />
+                        <span onClick={handleToggle} className=' text-xl absolute top-1 right-5'>
+                            <Icon className=' hover:text-gray-700' icon={icon} size={22} />
+                        </span>
                         </div>
                     </div>
 

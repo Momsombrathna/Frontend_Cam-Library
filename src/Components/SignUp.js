@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Welcome from './Assets/welocome.jpg';
+import { Icon } from 'react-icons-kit';
+import { eyeOff } from 'react-icons-kit/feather/eyeOff';
+import { eye } from 'react-icons-kit/feather/eye';
 
 
 const SignUp = () => {
@@ -36,9 +39,20 @@ const SignUp = () => {
         
     }
 
-    
-    
+    // handle password eye
+    const [type, setType]=useState('password');
+    const [icon, setIcon]=useState(eyeOff);
 
+    const handleToggle=()=>{
+        if(type === 'password'){
+            setIcon(eye);
+            setType('text');
+        }else{
+            setIcon(eyeOff);
+            setType('password');
+        }
+    }
+    
 
     return (
         <>
@@ -61,14 +75,23 @@ const SignUp = () => {
                         <div class="flex justify-between">
                             <label class="block text-gray-600 text-sm font-bold mb-1">Password</label>
                         </div>
-                        <input value={password} onChange={e=>passwordchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border-2 border-gray-300 rounded py-1 px-4 block w-full appearance-none" type="password" id="pwd" name="pwd" placeholder='Enter password' minlength="8" required />
+                        <div className=" relative">
+                        <input type={type} value={password} onChange={e=>passwordchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border-2 border-gray-300 rounded py-1 px-4 block w-full appearance-none" placeholder='Enter password' minlength="8" required />
+                        <span onClick={handleToggle} className='top-1 absolute right-5'>
+                            <Icon className=' hover:text-gray-700' icon={icon} size={22} />
+                        </span>
+                        </div>
                     </div>
                     <div class="mt-2">
                         <div class="flex justify-between">
                             <label class="block text-gray-600 text-sm font-bold mb-1">Repeat Password</label>
                         </div>
-                        <input value={confrim_password} onChange={e=>confirm_passwordchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border-2 border-gray-300 rounded py-1 px-4 block w-full appearance-none" type="password" id="pwd" name="pwd" placeholder='Reapeat password' minlength="8" required />
-                        {/* {error.confirmPassword && <span className='err'>{error.confirmPassword}</span>} */}
+                        <div className=" relative">
+                        <input type={type} value={confrim_password} onChange={e=>confirm_passwordchange(e.target.value)} class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border-2 border-gray-300 rounded py-1 px-4 block w-full appearance-none" placeholder='Reapeat password' minlength="8" required />
+                        <span onClick={handleToggle} className='top-1 absolute right-5'>
+                            <Icon className=' hover:text-gray-700' icon={icon} size={22} />
+                        </span>
+                        </div>  
                     </div>
                     {/* <div className=" flex flex-row gap-3 mt-5 pl-5">
                         <input className=' rounded-sm' type="checkbox" required />
