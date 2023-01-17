@@ -19,7 +19,7 @@ const Login = () => {
                     <div class="mt-4">
                         <div class="flex justify-between">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
-                            <a href="#" class="text-sm text-gray-600 hover:text-black hover:underline">Forget Password?</a>
+                            <a href="/" class="text-sm text-gray-600 hover:text-black hover:underline">Forget Password?</a>
                         </div>
                         <input class="bg-gray-200 text-gray-700 focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none" placeholder='Enter Password' type="password" />
                     </div>
