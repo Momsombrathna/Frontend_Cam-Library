@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
-import Home from './Components/Home';
-import ErrorPage from './Components/ErrorPage';
-import ReadBook from './Components/ReadBook';
-import Save from './Components/Save';
-import WelcomePage from './Components/WelcomePage';
-import SignUp from './Components/SignUp';
-import LogIn from './Components/Login';
+import Home from './Views/Home';
+import ErrorPage from './Views/ErrorPage';
+import ReadBook from './Views/ReadBook';
+import Save from './Views/Save';
+import WelcomePage from './Views/WelcomePage';
+import SignUp from './Views/SignUp';
+import LogIn from './Views/Login';
 import { ToastContainer } from 'react-toastify';
 
 const App = () => {

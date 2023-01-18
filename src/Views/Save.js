@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from './Costumize/Nav';
-import BookList from './Costumize/BookList';
+import Nav from './Components/Nav';
+import BookList from './Components/BookList';
 
 const Save = () => {
     return (
