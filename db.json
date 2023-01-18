@@ -13,7 +13,42 @@
       "password": "12345123",
       "confrim_password": "12345123",
       "accept": "confirm"
+    },
+    {
+      "id": "rosa",
+      "email": "rosa@gmail.com",
+      "password": "12345678",
+      "accept": "confirm"
+    },
+    {
+      "id": "pisey",
+      "email": "pisey@gmail.com",
+      "password": "12345678",
+      "accept": "confirm"
+    },
+    {
+      "id": "Voleak",
+      "email": "voleak@gmail.com",
+      "password": "12345612",
+      "accept": "confirm"
+    },
+    {
+      "id": "mimi",
+      "email": "mimi@gmail.com",
+      "password": "qwertyui",
+      "accept": "confirm"
+    },
+    {
+      "id": "bibo",
+      "email": "bibo@gmail.com",
+      "password": "09876543",
+      "accept": "confirm"
+    },
+    {
+      "id": "fifo",
+      "email": "fifo@gmail.com",
+      "password": "12345678",
+      "accept": "confirm"
     }
-    
   ]
 }

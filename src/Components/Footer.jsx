@@ -25,11 +25,11 @@ const Footer = () => {
         <span>© 2023 Cam-Library. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
         <span className="flex flex-row gap-5">
-          <a href=""><Icon icon={facebook} size="1.5rem" className=" hover:text-teal-500"/></a>
-          <a href=""><Icon icon={google} size="1.5rem" className=" hover:text-teal-500"/></a>
-          <a href=""><Icon icon={instagram} size="1.5rem" className=" hover:text-teal-500"/></a>
-          <a href=""><Icon icon={telegram} size="1.5rem" className=" hover:text-teal-500"/></a>
-          <a href=""><Icon icon={github} size="1.5rem" className=" hover:text-teal-500"/></a>
+          <a href="/"><Icon icon={facebook} size="1.5rem" className=" hover:text-teal-500"/></a>
+          <a href="/"><Icon icon={google} size="1.5rem" className=" hover:text-teal-500"/></a>
+          <a href="/"><Icon icon={instagram} size="1.5rem" className=" hover:text-teal-500"/></a>
+          <a href="/"><Icon icon={telegram} size="1.5rem" className=" hover:text-teal-500"/></a>
+          <a href="/"><Icon icon={github} size="1.5rem" className=" hover:text-teal-500"/></a>
 
         </span>
       </div>
