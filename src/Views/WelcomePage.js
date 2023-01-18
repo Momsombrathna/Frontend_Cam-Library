@@ -1,9 +1,10 @@
-import React from 'react';
-import Button from './Components/Button';
+import React, {useEffect} from 'react';
+import Button from '../Components/Button';
 import { Link } from 'react-router-dom';
-import Cover from './Assets/cover.jpg';
+import Cover from '../Assets/cover.jpg';
 
 const WelcomePage = () => {
+
     return (
         <>
         <div className='flex md:flex-row flex-col-reverse justify-center items-center px-8'>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import Home from './Views/Home';
 import ErrorPage from './Views/ErrorPage';
 import ReadBook from './Views/ReadBook';
@@ -7,7 +8,8 @@ import Save from './Views/Save';
 import WelcomePage from './Views/WelcomePage';
 import SignUp from './Views/SignUp';
 import LogIn from './Views/Login';
-import { ToastContainer } from 'react-toastify';
+import HomeLogin from './Views/HomeLogin';
+
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
           <Route path='/signup' element={<SignUp />}/>
           <Route path='/readbook' element={<ReadBook />}/>
           <Route path='/save' element={<Save />}/>
+          <Route path='/homelogin' element={<HomeLogin />}/>
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
     </Router>

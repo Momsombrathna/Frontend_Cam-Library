@@ -6,12 +6,12 @@ import Logo from '../Assets/logo.png';
 
 
 const Nav = () => {
-    let Links =[
-        {name:"Home",link:"/home"},
-        {name:"Save",link:"/save"},
-        {name:"Read",link:"/readbook"},
+    // let Links =[
+    //     {name:"Home",link:"/home"},
+    //     {name:"Save",link:"/save"},
+    //     {name:"Read",link:"/readbook"},
         
-    ];
+    // ];
 
     let [open,setOpen] = useState(false);
 
@@ -49,14 +49,14 @@ const Nav = () => {
                 </div>
                 </div>
                 </div>            
-                {
+                {/* {
                     Links.map((link)=>(
                         <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
                             <a href={link.link} className=' text-gray-600 text-lg hover:text-black  border-0 rounded-xl px-1 hover:bg-gray-200 duration-500'>{link.name}</a>
                         </li>
                     ))
-                }
-                <div className="flex flex-row gap-1">
+                } */}
+                <div className="flex flex-row gap-1 lg:mt-0 md:mt-5 mt-10">
                 <Link to="/login"><Button>Log In</Button></Link>
                 <Link to="/signup"><Button>Sign Up</Button></Link>
                 </div>

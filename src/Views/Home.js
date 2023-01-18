@@ -1,9 +1,14 @@
-import React from 'react';
-import Nav from './Components/Nav';
-import BookList from './Components/BookList';
-import Footer from './Components/Footer';
+import React, {useEffect} from 'react';
+import Nav from '../Components/Nav';
+import BookList from '../Components/BookList';
+import Footer from '../Components/Footer';
 
 const Home = () => {
+
+    useEffect(()=>{
+        sessionStorage.clear();
+    },[]);
+
     return (
         <>
         <Nav />

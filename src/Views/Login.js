@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Welcome from './Assets/welocome.jpg';
+import Welcome from '../Assets/welocome.jpg';
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
@@ -28,7 +28,8 @@ const Login = () => {
             }else{
                 if(resp.password === password) {
                     toast.success('Success');
-                    usenavigate('/home')
+                    sessionStorage.setItem('username', username);
+                    usenavigate('/homelogin')
                 }else{
                     toast.error('Please Enter valid credentials.')
                 }
