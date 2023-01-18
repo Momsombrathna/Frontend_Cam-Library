@@ -1,0 +1,19 @@
+{
+  "user": [
+    {
+      "id": "brathna",
+      "email": "brathna84@gmail.com",
+      "password": "12345678",
+      "confrim_password": "12345689",
+      "accept": "confirm"
+    },
+    {
+      "id": "brosith",
+      "email": "peterson@gmail.com",
+      "password": "12345123",
+      "confrim_password": "12345123",
+      "accept": "confirm"
+    }
+    
+  ]
+}
