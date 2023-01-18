@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './Costumize/Button';
+import Button from './Components/Button';
 import { Link } from 'react-router-dom';
 import Cover from './Assets/cover.jpg';
 

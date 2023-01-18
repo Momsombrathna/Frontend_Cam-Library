@@ -1,6 +1,7 @@
 import React from 'react';
-import Nav from './Costumize/Nav';
-import BookList from './Costumize/BookList';
+import Nav from './Components/Nav';
+import BookList from './Components/BookList';
+import Footer from './Components/Footer';
 
 const Home = () => {
     return (
@@ -17,6 +18,10 @@ const Home = () => {
            <h1 className='mb-5 2xl:pl-20 xl:pl-32 lg:pl-16 md:pl-10 sm:pl-10 pl-10 font-bold text-2xl'>History books</h1>
            <BookList /> 
            </div>
+           <div className=" mt-5">
+            <Footer/>
+           </div>
+           
        </main>
 
         </>
