@@ -69,10 +69,10 @@ const NavLog = () => {
                         }
                         
                         <Link to="/home">
-                            <div className="flex flex-row gap-1 md:ml-10  ml-0 w-20  border-2 text-gray-700 
+                            <div title='Log out account' className="flex flex-row gap-1 md:ml-10  ml-0 w-10  border-2 text-gray-700 
                                             rounded-md p-1 bg-gray-200 hover:text-white hover:bg-red-400">
                                 <div><Icon icon={ic_logout} size="1.5rem"/></div>
-                                <span className='text-xs'>LogOut</span>
+                                {/* <span className='text-xs'>LogOut</span> */}
                             </div>
                         </Link>
 
