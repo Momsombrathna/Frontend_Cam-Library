@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import Welcome from './Assets/welocome.jpg';
+import Welcome from '../Assets/welocome.jpg';
 import { Icon } from 'react-icons-kit';
 import { eyeOff } from 'react-icons-kit/feather/eyeOff';
 import { eye } from 'react-icons-kit/feather/eye';
@@ -10,9 +10,11 @@ import { eye } from 'react-icons-kit/feather/eye';
 const Login = () => {
     const [username,usernameupdate] = useState('');
     const [password,passwordupdate] = useState('');
-  
+
+    // const servenavigate = useNavigate();
 
     const usenavigate=useNavigate();
+  
 
     const ProceedLogin = (e) => {
         e.preventDefault();
@@ -28,7 +30,8 @@ const Login = () => {
             }else{
                 if(resp.password === password) {
                     toast.success('Success');
-                    usenavigate('/home')
+                    sessionStorage.setItem('username', username);
+                    usenavigate('/homelogin')
                 }else{
                     toast.error('Please Enter valid credentials.')
                 }
