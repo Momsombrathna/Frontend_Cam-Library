@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Icon from 'react-icons-kit';
 import {ic_logout} from 'react-icons-kit/md/ic_logout';
 import { BsList } from "react-icons/bs";
@@ -14,9 +14,7 @@ const NavLog = () => {
         
     ];
 
-    let [open,setOpen] = useState(false);
-
-    const usenavigate = useNavigate();
+    const usenavigate=useNavigate();
 
     useEffect(()=>{
         let username = sessionStorage.getItem('username');
@@ -24,8 +22,9 @@ const NavLog = () => {
             usenavigate('/home');
         }
 
-    },[]);
+    },);
 
+    let [open,setOpen] = useState(false);
 
     return (
         <>

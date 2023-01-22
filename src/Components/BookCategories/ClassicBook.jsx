@@ -15,12 +15,12 @@ const ClassicBook = (props) => {
             smalltittle:"Functions for the Instrumental",
             description:"320 Pages · 1998 · 28.7 MB", 
             download:"https://www.pdfdrive.com/classical-form-theory-of-formal-functions-for-the-instrumental-music-of-haydn-mozart-and-beethoven-a-theory-of-formal-functions-for-the-instrumental-music-of-haydn-mozart-and-beethoven-d184858864.html"},
-        {Image: '' ,
-            link:"",
-            tittle:" ", 
-            smalltittle:"", 
-            description:"", 
-            download:""},
+        {Image: 'https://cdn.asaha.com/assets/thumbs/6cf/6cf5e7ca478b325cab5313720de907de.jpg' ,
+            link:"https://www.pdfdrive.com/van-halen-30-classics-from-the-legendary-guitar-god-authentic-guitar-tab-authentic-guitar-tab-editions-e157029524.html",
+            tittle:"Van Halen: 30 Classics from the Legendary", 
+            smalltittle:"Guitar God (Authentic Guitar TAB) (Authentic Guitar-Tab", 
+            description:"258 Pages · 2010 · 27.37 MB ", 
+            download:"https://www.pdfdrive.com/van-halen-30-classics-from-the-legendary-guitar-god-authentic-guitar-tab-authentic-guitar-tab-editions-d157029524.html"},
         {Image: '' ,
             link:"",
             tittle:"",
@@ -92,15 +92,15 @@ const ClassicBook = (props) => {
                             <div class="p-4" >
                                 <div className='flex justify-center items-center'><img src={slide.Image} target="_blank" alt="" className='w-40 h-60' /></div>
                                 <div className='flex flex-col mb-4 mt-2'>
-                                    <p href={slide.link} target='_blank' class=" text-md font-bold tracking-tight text-gray-900 dark:text-white">{slide.tittle}</p>
+                                    <p class=" text-md font-bold tracking-tight text-gray-900 dark:text-white">{slide.tittle}</p>
                                     <p className='text-xs'>{slide.smalltittle}</p>
                                 </div>
                               
                                 <span className='flex flex-row gap-2'>
                                     <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{slide.description}</p>
-                                    <a href={slide.link} target='_blank' className=' hover:text-black hover:font-bold'>. Views</a>
+                                    <a href={slide.link} target='_blank' rel="noopener noreferrer" className=' hover:text-black hover:font-bold'>. Views</a>
                                 </span>
-                                <a href={slide.download} target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                <a href={slide.download} target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     Download
                                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                                 </a>

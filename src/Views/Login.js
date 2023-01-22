@@ -10,9 +10,11 @@ import { eye } from 'react-icons-kit/feather/eye';
 const Login = () => {
     const [username,usernameupdate] = useState('');
     const [password,passwordupdate] = useState('');
-  
+
+    // const servenavigate = useNavigate();
 
     const usenavigate=useNavigate();
+  
 
     const ProceedLogin = (e) => {
         e.preventDefault();
