@@ -1,30 +1,34 @@
 import React, { useState } from 'react';
 import Button from './Button';
-import { DiAtom } from "react-icons/di";
 import { BsList } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import Logo from '../Assets/logo.png';
 
 
 const Nav = () => {
-    let Links =[
-        {name:"HOME",link:"/"},
-        {name:"SAVE",link:"/save"},
-        {name:"READ",link:"/readbook"},
+    // let Links =[
+    //     {name:"Home",link:"/home"},
+    //     {name:"Save",link:"/save"},
+    //     {name:"Read",link:"/readbook"},
         
-    ];
+    // ];
 
     let [open,setOpen] = useState(false);
 
     return (
         <div className=' shadow-md w-full fixed top-0 left-0'>
-            <div className=' md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+            <div className=' md:flex items-center justify-between bg-white py-1 md:px-10 px-7'>
+            <Link to="/home">
             <div className=' font-bold text-2xl cursor-pointer flex items-center  text-gray-800'>
                     
-                <span className='text-3xl text-indigo-600 mr-1 pt-1'>
-                    <DiAtom size="2rem" />
-                </span>
-                Cam-Library
-            </div>
+                    <span className='text-3xl text-indigo-600 mr-1 pt-1'>
+                        {/* <DiAtom size="2rem" /> */}
+                        <img src={Logo} alt="logo" className=' w-14 h-14'/>
+                       
+                    </span>
+                    Cam-Library
+                </div>
+            </Link>
             
             <div onClick={()=>setOpen(!open)}  className='text-3xl absolute right-8 top-6 cursor-pointer lg:hidden'>
                 <BsList name={open? 'close':''} className='hover:text-cyan-600 rounded-md border-2' size="2rem"/></div>
@@ -45,16 +49,16 @@ const Nav = () => {
                 </div>
                 </div>
                 </div>            
-                {
+                {/* {
                     Links.map((link)=>(
                         <li key={link.name} className='md:ml-8 text-xl md:my-0 my-7'>
-                            <a href={link.link} className='text-grey-800 text-lg  border-0 rounded-xl px-1 hover:bg-gray-200 duration-500'>{link.name}</a>
+                            <a href={link.link} className=' text-gray-600 text-lg hover:text-black  border-0 rounded-xl px-1 hover:bg-gray-200 duration-500'>{link.name}</a>
                         </li>
                     ))
-                }
-                <div className="flex flex-row gap-1">
+                } */}
+                <div className="flex flex-row gap-1 lg:mt-0 md:mt-5 mt-10">
                 <Link to="/login"><Button>Log In</Button></Link>
-                <Link to="/signin"><Button>Sign In</Button></Link>
+                <Link to="/signup"><Button>Sign Up</Button></Link>
                 </div>
             </ul>
          

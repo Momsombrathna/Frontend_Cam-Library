@@ -5,7 +5,11 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'cam-green' : '#708942',
+      },
+    },
   },
-  plugins: [require('flowbite/plugin')],
+  plugins: [require('flowbite/plugin','tailwind-scrollbar-hide', 'tailwind-scrollbar')],
 }
