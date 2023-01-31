@@ -9,12 +9,12 @@ import WelcomePage from './Views/WelcomePage';
 import SignUp from './Views/SignUp';
 import LogIn from './Views/Login';
 import HomeLogin from './Views/HomeLogin';
-
+import AboutPage from './Views/AboutPage';
 
 const App = () => {
   return (
     <>
-    <ToastContainer theme='colored' limit={2} autoClose={2000} pauseOnHover
+    <ToastContainer theme='colored' limit={2} autoClose={1000} pauseOnHover
     draggable={false}
     pauseOnFocusLoss={false}></ToastContainer>
     <Router>
@@ -26,6 +26,7 @@ const App = () => {
           <Route path='/readbook' element={<ReadBook />}/>
           <Route path='/save' element={<Save />}/>
           <Route path='/homelogin' element={<HomeLogin />}/>
+          <Route path='/about' element={<AboutPage/>}/>
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
     </Router>

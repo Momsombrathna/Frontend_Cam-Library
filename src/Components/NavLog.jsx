@@ -10,6 +10,7 @@ const NavLog = () => {
     let Links =[
         {name:"Home",link:"/homelogin"},
         {name:"Save",link:"/save"},
+        {name:"About",link:"/about"},
         {name:"Read",link:"/readbook"},
         
     ];

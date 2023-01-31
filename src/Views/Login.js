@@ -21,7 +21,7 @@ const Login = () => {
         if(validate()){
         /// implementation
         // console.log('proceed');
-        fetch('http://localhost:8000/user/'+username).then((res)=>{
+        fetch('https://testapi-9qwq.onrender.com/user/'+username).then((res)=>{
             return res.json();
         }).then((resp)=>{
             console.log(resp)

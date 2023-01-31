@@ -21,18 +21,11 @@ const SignUp = () => {
     const handlesubmit=(e)=>{
         e.preventDefault();
         let regonize={id,email,password,accept};
-        // console.log(regobj);
-        fetch("http://localhost:8000/user", {
+        fetch("https://testapi-9qwq.onrender.com/user", {
             method: "POST",
             headers: {'content-type':'application/json'},
             body:JSON.stringify(regonize)
-        }).then((res)=>{
-            // if(password === confrim_password) {
-            //     toast.success('Register Succcessfully.');
-            //     navigate('/home')
-            // }else{
-            //     toast.error('The Repeat password does not match.');
-            // }
+        }).then((res)=>{ 
             toast.success('Register Succcessfully.');
             toast.info('Please Enter the Username and passsword to Login into page.');
             navigate('/login')
