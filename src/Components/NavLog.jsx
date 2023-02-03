@@ -4,9 +4,13 @@ import {ic_logout} from 'react-icons-kit/md/ic_logout';
 import { BsList } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Assets/logo.png';
+import {book1} from './Data/BookData';
+import {GiCancel} from 'react-icons/gi';
+import {AiOutlineDownload} from 'react-icons/ai';
 
 const NavLog = () => {
 
+    // Nav properties
     let Links =[
         {name:"Home",link:"/homelogin"},
         {name:"Save",link:"/save"},
@@ -17,6 +21,7 @@ const NavLog = () => {
 
     const usenavigate=useNavigate();
 
+    // Effect 
     useEffect(()=>{
         let username = sessionStorage.getItem('username');
         if(username === '' || username === null){
@@ -27,9 +32,31 @@ const NavLog = () => {
 
     let [open,setOpen] = useState(false);
 
+    // modal
+    const [modal, setModel] = useState(false);
+
+    // Toggle
+    const toggleModel = () =>{
+        setModel(!modal)
+    }
+
+    // Search engin
+    const [filter, setFilter] = useState('');
+
+    const searchText = (event) =>{
+        setFilter(event.target.value);
+    }
+
+    let dataSearch = (book1).filter(item =>{
+        return Object.keys(item).some(key =>
+            item[key].toString().toLowerCase().includes(filter.toString().toLowerCase())
+            )
+
+    });
+
     return (
         <>
-            <nav className=' shadow-md w-full fixed top-0 left-0'>
+            <nav className=' w-full fixed top-0 left-0'>
                     <div className=' md:flex items-center justify-between bg-white py-1 md:px-10 px-7'>
                     <Link to="/homelogin">
                     <div className=' font-bold text-2xl cursor-pointer flex items-center  text-gray-800'>
@@ -49,7 +76,7 @@ const NavLog = () => {
                         <div className='lg:mt-0 mt-10'>
                         <div class="flex justify-start">
                         <div class=" xl:w-96">
-                            <div class="input-group relative flex flex-row items-stretch w-full">
+                            <div onClick={toggleModel} onChange={searchText.bind(this)} class="input-group relative flex flex-row items-stretch w-full">
                             <input type="search" class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300  transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none rounded-l-lg" placeholder="Search" aria-label="Search" aria-describedby="button-addon2"/>
                             <button class="btn px-6 py-2.5 bg-indigo-600 text-white font-medium text-xs leading-tight uppercase rounded-r-lg shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700  focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out flex items-center" type="button" id="button-addon2">
                                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="w-4" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -79,7 +106,41 @@ const NavLog = () => {
                     </ul>
 
                     </div>
-                </nav>
+
+                    {modal &&(
+                <div className=' 2xl:px-44 xl:px-32 lg:px-24 md:px-16 lg:mt-1 mt-16 px-5  h-auto'>
+                <div className=' float-right pr-10 absolute mt-1 pl-1'>
+                    <GiCancel onClick={toggleModel} className=' text-gray-700 hover:text-red-500 py-1 ' size="2rem"/>
+                </div>
+                <div className=" flex flex-wrap gap-2 rounded-md p-5 px-10 w-full h-96 bg-white shadow-lg border-2 overflow-y-scroll">
+                        {dataSearch.map((item, index)=>{
+                            return(
+                                <div className='flex flex-row gap-2 over'>
+                                    <div className=' flex flex-col mb-3 gap-2 border-2 p-2 rounded-md'>
+                                        <div className='flex justify-center'>
+                                            <img src={item.image} alt="" target="_blank" className=' rounded-sm w-20 h-32' />
+                                        </div>
+                                        <div className='flex flex-col mt-1'>
+                                            <p class=" text-md font-bold tracking-tight text-gray-900 dark:text-white">{item.tittle}</p>
+                                            <p className='text-xs'>{item.smalltittle}</p> 
+                                            <div className=' mt-3'>
+                                            <a href={item.download} target="_blank" rel="noopener noreferrer" to  class="inline-flex items-center px-3 py-1 w-28 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                Download
+                                                <AiOutlineDownload size="1.5rem" className='pl-1'/>
+                                            </a>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            )
+                        })}
+                </div>
+                </div>
+            )}
+
+            </nav>
         </>
         
     );
