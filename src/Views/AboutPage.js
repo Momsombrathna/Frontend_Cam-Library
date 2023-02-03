@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../Components/Nav';
+import NavLog from '../Components/NavLog';
 import Footer from '../Components/Footer';
 import cover from '../Assets/cover.jpg';
 import Feedback from '../Components/Feedback';
@@ -7,7 +7,7 @@ import Feedback from '../Components/Feedback';
 const AboutPage = () => {
     return (
         <>
-            <Nav />
+            <NavLog />
             <main>
                 <div class="py-16 bg-white">
                     <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
