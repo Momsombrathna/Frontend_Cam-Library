@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { toast } from 'react-toastify';
+import { useNavigate } from "react-router-dom";
 
 const Feedback = () => {
 
@@ -8,6 +9,8 @@ const Feedback = () => {
     const [category,setCategory] = useState("");
     const [title,setTitle] = useState("");
     const [message,setMessage] = useState("");
+
+    const navigate = useNavigate();
 
 
     //handle submit post data to api
@@ -21,7 +24,8 @@ const Feedback = () => {
         "content-Type": "application/json"},
       body: JSON.stringify(data),
     }).then((res)=>{ 
-      toast.success('Successful.');
+      toast.success('Successful send form.');
+      navigate('/homelogin')
   }).catch((err)=>{
       toast.error('Failed :'+err.message);
   });
@@ -36,7 +40,7 @@ const Feedback = () => {
               Book Suggestion
             </h1>
             <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-              Please input Book Category, Author and Book Category.
+              Please input Book Category, name, tittle and message.
             </p>
           </div>
 
@@ -114,8 +118,8 @@ const Feedback = () => {
                 </div>
               </div>
               <div className="p-2 w-full">
-                <button onClick={handleSubmit} className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">
-                  Button
+                <button onClick={handleSubmit} className="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded-md text-lg">
+                  Submit
                 </button>
               </div>
             </div>

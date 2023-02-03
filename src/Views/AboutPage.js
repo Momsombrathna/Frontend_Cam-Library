@@ -10,7 +10,7 @@ const AboutPage = () => {
             <NavLog />
             <main>
                 <div class="py-16 bg-white">
-                    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+                    <div class="container m-auto text-gray-600 md:px-12 xl:px-6">
                         <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                             <div class="md:7/12 lg:w-6/12">
                                 <h2 class="text-2xl text-gray-900 font-bold md:text-5xl">About Cam-Library</h2>

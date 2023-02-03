@@ -1,25 +1,23 @@
 export const PRODUCTS = [
-    { name: "Drag And Drop", link: "#" },
-    { name: "Visual Studio X", link: "#" },
-    { name: "Easy Content", link: "#" },
+    { name: "READ", link: "/readbook" },
+    { name: "ABOUT", link: "/about" },
+
   ];
   export const RESOURCES = [
-    { name: "Industries and tools", link: "#" },
-    { name: "Use cases", link: "#" },
-    { name: "Blog", link: "#" },
-    { name: "Online evenet", link: "#" },
-    { name: "Nostrud exercitation", link: "#" },
+    { name: "NPM", link: "https://www.npmjs.com/" },
+    { name: "Tailwind CSS", link: "https://tailwindcss.com/" },
+    { name: "Flowbite", link: "https://flowbite.com/" },
+    { name: "Stack Overflow", link: "https://stackoverflow.com/" },
+    { name: "Chat GPT", link: "https://openai.com/blog/chatgpt/" },
   ];
   export const COMPANY = [
-    { name: "Diversity & inclusion", link: "#" },
-    { name: "About us", link: "#" },
-    { name: "Press", link: "#" },
-    { name: "Customer Stories", link: "#" },
-    { name: "Online communities", link: "#" },
+    { name: "Vercel", link: "https://vercel.com/dashboard" },
+    { name: "Render", link: "https://render.com/" },
+    { name: "FE", link: "http://www.fe.rupp.edu.kh/" },
   ];
   export const SUPPORT = [
-    { name: "Documentation", link: "#" },
-    { name: "Tutorials & guides", link: "#" },
-    { name: "Webinars", link: "#" },
-    { name: "Open-source", link: "#" },
+    { name: "Google", link: "#" },
+    { name: "PDF DRIVE", link: "https://www.pdfdrive.com/" },
+    { name: "JSON Server", link: "#" },
+    { name: "Git Hup", link: "https://github.com/" },
   ];
