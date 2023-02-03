@@ -49,6 +49,12 @@
       "email": "fifo@gmail.com",
       "password": "12345678",
       "accept": "confirm"
+    },
+    {
+      "id": "SoPhors",
+      "email": "phors@gmail.com",
+      "password": "20232024",
+      "accept": "confirm"
     }
   ]
 }

@@ -4,6 +4,7 @@ import {ic_logout} from 'react-icons-kit/md/ic_logout';
 import { BsList } from "react-icons/bs";
 import { Link, useNavigate } from 'react-router-dom';
 import Logo from '../Assets/logo.png';
+import Button from './Button';
 
 const NavLog = () => {
 
@@ -66,15 +67,17 @@ const NavLog = () => {
                                 </li>
                             ))
                         }
-                        
+
+                        <div title='book upload' className="flex flex-row gap-1 p-1 ml-0 ">
+                            <Link to="/bookUpload"><Button>Upload</Button></Link>   
+                        </div>
+
                         <Link to="/home">
                             <div title='Log out account' className="flex flex-row gap-1 md:ml-10  ml-0 w-10  border-2 text-gray-700 
                                             rounded-md p-1 bg-gray-200 hover:text-white hover:bg-red-400">
                                 <div><Icon icon={ic_logout} size="1.5rem"/></div>
-                                {/* <span className='text-xs'>LogOut</span> */}
                             </div>
                         </Link>
-
                     </ul>
 
                     </div>

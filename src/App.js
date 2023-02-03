@@ -9,6 +9,7 @@ import WelcomePage from './Views/WelcomePage';
 import SignUp from './Views/SignUp';
 import LogIn from './Views/Login';
 import HomeLogin from './Views/HomeLogin';
+import BookUpload from './Components/BookUpload/BookUpload';
 
 
 const App = () => {
@@ -26,6 +27,9 @@ const App = () => {
           <Route path='/readbook' element={<ReadBook />}/>
           <Route path='/save' element={<Save />}/>
           <Route path='/homelogin' element={<HomeLogin />}/>
+
+          <Route path='/bookUpload' element={<BookUpload />}/>
+
           <Route path='*' element={<ErrorPage />}/>
         </Routes>
     </Router>
