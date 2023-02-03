@@ -55,7 +55,7 @@ export const book1 = [
         link:"https://drive.google.com/file/d/1LHgfuuhzy6GrgsXYf8W-WJOLxi2jSr60/preview",
         tittle:"The Celestine Prophecy",
         smalltittle:"An Adventure", 
-        description:"161 Pages · 1997 · 1.28 MB · 11,995 Downloads· English", 
+        description:"161 Pages · 1997 · 1.28 MB", 
         download:"https://www.pdfdrive.com/the-celestine-prophecy-an-adventure-d184311793.html"
     },         
     {   id: 8,
