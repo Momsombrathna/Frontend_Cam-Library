@@ -22,7 +22,7 @@ const SignUp = () => {
         e.preventDefault();
         let regonize={id,email,password,accept};
         // console.log(regobj);
-        fetch("http://localhost:8000/user", {
+        fetch(" http://localhost:8000/user", {
             method: "POST",
             headers: {'content-type':'application/json'},
             body:JSON.stringify(regonize)
