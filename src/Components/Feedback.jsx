@@ -118,9 +118,6 @@ const Feedback = () => {
                   Button
                 </button>
               </div>
-              <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                <h2 className="text-blue-500">Cam-Library</h2>
-              </div>
             </div>
           </div>
         </div>
