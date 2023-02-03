@@ -195,7 +195,7 @@ export const book3 = [
         link:"https://drive.google.com/file/d/1LM9jUy5eh-4tjruTzieTM9w6OFhmtDFD/view?usp=share_link",
         tittle:"More Guns, Less Crime", 
         smalltittle:"Understanding Crime", 
-        description:"456 Pages · 2010 · 2.76 MB · 1,622 Downloads· English ", 
+        description:"456 Pages · 2010 · 2.76 MB ", 
         download:"https://www.pdfdrive.com/more-guns-less-crime-understanding-crime-and-gun-control-laws-third-edition-studies-in-law-and-economics-d161136837.html"
     },  
     {   id: 4,
