@@ -1,5 +1,5 @@
 import React from 'react';
-import { book } from '../Data/BookData';
+import { book3 } from '../Data/BookData';
 import { AiOutlineDownload } from "react-icons/ai";
 
 const CrimeBook = (props) => {
@@ -9,7 +9,7 @@ const CrimeBook = (props) => {
             <div className='flex items-stretch'>
                 <div id='slider' className=' w-full rounded-lg h-auto p-2 inline-block whitespace-nowrap overflow-x-scroll'>
                     {
-                        book.map((item)=>{
+                        book3.map((item)=>{
                             return(
                                 <div className=' inline-block'>
                                 <div class=" mr-2 max-w-md bg-white border border-gray-200 rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
