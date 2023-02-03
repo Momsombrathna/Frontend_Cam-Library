@@ -10,6 +10,7 @@ import SignUp from './Views/SignUp';
 import LogIn from './Views/Login';
 import HomeLogin from './Views/HomeLogin';
 import AboutPage from './Views/AboutPage';
+import FeedBack from './Components/Feedback';
 
 const App = () => {
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '../Components/Nav';
 import Footer from '../Components/Footer';
 import cover from '../Assets/cover.jpg';
+import Feedback from '../Components/Feedback';
 
 const AboutPage = () => {
     return (
@@ -23,7 +24,10 @@ const AboutPage = () => {
                     </div>
                 </div>
             </main>
-            <div className='mt-36'></div>
+            <div className='mt-12'>
+            <Feedback/>
+            </div>
+
             <Footer />
         </>
     )

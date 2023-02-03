@@ -9,7 +9,7 @@ import {github} from 'react-icons-kit/icomoon/github';
 
 const Footer = () => {
   return (
-    <footer className="bg-zinc-900 text-white">
+    <footer className="bg-black text-white fixe">
       {/* <div className="md:flex md:justify-between md:items-center sm:px-12 px-4 bg-[#ffffff19] py-7">
         <h1 className="lg:text-4xl text-3xl md:mb-0 mb-6 lg:leading-normal font-semibold md:w-2/5">
           <span className="text-blue-600">Cam-Library</span></h1>
