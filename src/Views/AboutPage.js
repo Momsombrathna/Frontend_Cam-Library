@@ -1,12 +1,13 @@
 import React from 'react';
-import Nav from '../Components/Nav';
+import NavLog from '../Components/NavLog';
 import Footer from '../Components/Footer';
 import cover from '../Assets/cover.jpg';
+import Feedback from '../Components/Feedback';
 
 const AboutPage = () => {
     return (
         <>
-            <Nav />
+            <NavLog />
             <main>
                 <div class="py-16 bg-white">
                     <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
@@ -23,7 +24,10 @@ const AboutPage = () => {
                     </div>
                 </div>
             </main>
-            <div className='mt-36'></div>
+            <div className='mt-12'>
+            <Feedback/>
+            </div>
+
             <Footer />
         </>
     )

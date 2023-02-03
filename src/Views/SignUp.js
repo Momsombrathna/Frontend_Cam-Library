@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 const SignUp = () => {
 
     const[id,idchange]=useState("");
-    // const[name,namechange]=useState("");
     const[accept,acceptchange] = useState("confirm");
     const[email,emailchange] = useState("");
     const[password,passwordchange] = useState("");
