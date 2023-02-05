@@ -24,7 +24,7 @@ const NavLog = () => {
     useEffect(()=>{
         let username = sessionStorage.getItem('username');
         if(username === '' || username === null){
-            usenavigate('/home');
+            usenavigate('/');
         }
 
     },);
@@ -94,7 +94,7 @@ const NavLog = () => {
                             ))
                         }
                         
-                        <Link to="/home">
+                        <Link to="/">
                             <div title='Log out account' className="flex flex-row gap-1 md:ml-10  ml-0 w-10  border-2 text-gray-700 
                                             rounded-md p-1 bg-gray-200 hover:text-white hover:bg-red-400">
                                 <div><Icon icon={ic_logout} size="1.5rem"/></div>
@@ -107,40 +107,40 @@ const NavLog = () => {
                     </div>
 
                     {modal &&(
-                <div className=' 2xl:px-44 xl:px-32 lg:px-24 md:px-16 lg:mt-1 mt-16 px-5  h-auto'>
-                <div className=' float-right pr-10 absolute mt-1 pl-1'>
-                    <GiCancel onClick={toggleModel} className=' text-gray-700 hover:text-red-500 py-1 ' size="2rem"/>
-                </div>
-                <div className=" flex flex-wrap gap-2 rounded-md p-5 px-10 w-full h-96 bg-white shadow-lg border-2 overflow-y-scroll">
-                        {dataSearch.map((item, index)=>{
-                            return(
-                                <div className='flex flex-row gap-2 over'>
-                                    <div className=' flex flex-col mb-3 gap-2 border-2 p-2 rounded-md'>
-                                        <div className='flex justify-center'>
-                                            <img src={item.image} alt="" target="_blank" className=' rounded-sm w-20 h-32' />
-                                        </div>
-                                        <div className='flex flex-col mt-1'>
-                                            <p class=" text-md font-bold tracking-tight text-gray-900 dark:text-white">{item.tittle}</p>
-                                            <p className='text-xs'>{item.smalltittle}</p> 
-                                            <div className=' flex flex-row gap-1 mt-3'>
-                                            <a href={item.download} target="_blank" rel="noopener noreferrer" to  class="inline-flex items-center px-3 py-1 w-28 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                                Download
-                                                <AiOutlineDownload size="1.5rem" className='pl-1'/>
-                                            </a>
-                                            <div className='px-2 py-1 bg-white border-2 rounded-lg'> 
-                                            <a href={item.link} target='_blank' rel="noopener noreferrer" className=' hover:text-blue-700 text-gray-900 font-medium'>Views</a>
+                        <div className=' 2xl:px-44 xl:px-32 lg:px-24 md:px-16 lg:mt-1 mt-16 px-5  h-auto'>
+                        <div className=' float-right pr-10 absolute mt-1 pl-1'>
+                            <GiCancel onClick={toggleModel} className=' text-gray-700 hover:text-red-500 py-1 ' size="2rem"/>
+                        </div>
+                        <div className=" flex flex-wrap gap-2 rounded-md p-5 px-10 w-full h-96 bg-white shadow-lg border-2 overflow-y-scroll">
+                                {dataSearch.map((item, index)=>{
+                                    return(
+                                        <div className='flex flex-row gap-2 over'>
+                                            <div className=' flex flex-col mb-3 gap-2 border-2 p-2 rounded-md'>
+                                                <div className='flex justify-center'>
+                                                    <img src={item.image} alt="" target="_blank" className=' rounded-sm w-20 h-32' />
+                                                </div>
+                                                <div className='flex flex-col mt-1'>
+                                                    <p class=" text-md font-bold tracking-tight text-gray-900 dark:text-white">{item.tittle}</p>
+                                                    <p className='text-xs'>{item.smalltittle}</p> 
+                                                    <div className=' flex flex-row gap-1 mt-3'>
+                                                    <a href={item.download} target="_blank" rel="noopener noreferrer" to  class="inline-flex items-center px-3 py-1 w-28 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                                        Download
+                                                        <AiOutlineDownload size="1.5rem" className='pl-1'/>
+                                                    </a>
+                                                    <div className='px-2 py-1 bg-white border-2 rounded-lg'> 
+                                                    <a href={item.link} target='_blank' rel="noopener noreferrer" className=' hover:text-blue-700 text-gray-900 font-medium'>Views</a>
+                                                    </div>
+                                                    </div>
+                                            
+                                                </div>
                                             </div>
-                                            </div>
-                                    
+                                                
                                         </div>
-                                    </div>
-                                        
-                                </div>
-                            )
-                        })}
-                </div>
-                </div>
-            )}
+                                    )
+                                })}
+                        </div>
+                        </div>
+                    )}
 
             </nav>
         </>

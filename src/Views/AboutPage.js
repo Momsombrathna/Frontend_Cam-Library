@@ -21,12 +21,13 @@ const AboutPage = () => {
                                 <img src={cover} alt="" loading="lazy" className="rounded-xl" />
                             </div>
                         </div>
+                        <div className='mt-12'>
+                        <Feedback/>
+                        </div>
                     </div>
                 </div>
             </main>
-            <div className='mt-12'>
-            <Feedback/>
-            </div>
+            
 
             <Footer />
         </>

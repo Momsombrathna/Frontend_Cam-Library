@@ -5,12 +5,10 @@ import Home from './Views/Home';
 import ErrorPage from './Views/ErrorPage';
 import ReadBook from './Views/ReadBook';
 import Save from './Views/Save';
-import WelcomePage from './Views/WelcomePage';
 import SignUp from './Views/SignUp';
 import LogIn from './Views/Login';
 import HomeLogin from './Views/HomeLogin';
 import AboutPage from './Views/AboutPage';
-import FeedBack from './Components/Feedback';
 
 const App = () => {
   return (
@@ -20,8 +18,7 @@ const App = () => {
     pauseOnFocusLoss={false}></ToastContainer>
     <Router>
         <Routes>
-          <Route path='/' element={<WelcomePage />}/>
-          <Route path='/home' element={<Home />}/>
+          <Route path='/' element={<Home />}/>
           <Route path='/login' element={<LogIn />}/>
           <Route path='/signup' element={<SignUp />}/>
           <Route path='/readbook' element={<ReadBook />}/>

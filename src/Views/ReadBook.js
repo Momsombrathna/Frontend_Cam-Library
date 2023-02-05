@@ -10,7 +10,7 @@ const ReadBook = () => {
                     <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
                         {   /* show book */}
                         <div class="lg:w-8/12">
-                            <iframe className='md:w-5/6' src="https://drive.google.com/file/d/10K0MSdv2pfe6lLWjuwKRouufpVd6GKuW/preview" height='650'></iframe>
+                            <iframe className='md:w-5/6' src="https://drive.google.com/file/d/10K0MSdv2pfe6lLWjuwKRouufpVd6GKuW/preview" height='650' title="This is a unique title" />
                         </div>
                         {/* Book info */}
                         <div class="md:7/12">
